@@ -1,7 +1,7 @@
 name: release
 on:
   push:
-    tags: ["v*"]
+    tags: ['v*']
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -15,8 +15,6 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - run: |
-          test -n "$NPM_TOKEN"
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
           yarn install
           npm publish
         env:
