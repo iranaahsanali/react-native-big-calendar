@@ -16,4 +16,3 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - run: |
           yarn install
-          npm publish
