@@ -17,5 +17,3 @@ jobs:
       - run: |
           yarn install
           npm publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
