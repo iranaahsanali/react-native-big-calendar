@@ -26,6 +26,9 @@ storiesOf('showcase - Mobile', module)
         height={MOBILE_HEIGHT}
         events={events}
         mode="day"
+        hourRowHeight={100}
+        eventCellStyle={{ width: 220, borderRadius: 0 }}
+        overlapOffset={230}
         onPressEvent={(event) => alert(event.title)}
       />
     </View>
